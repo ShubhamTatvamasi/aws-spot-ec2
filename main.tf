@@ -5,6 +5,7 @@ provider "aws" {
 resource "aws_spot_instance_request" "ec2-spot" {
   ami           = "ami-0b8959ac764ad4343"
   instance_type = "t3a.xlarge"
+  spot_type     = "one-time"
 
   tags = {
     Name = "ec2-spot"
